@@ -1,12 +1,15 @@
 <form>
+  <label for="controller" class="controlador">Controlador</label>
+  <select id="controller" (change)="onSelect($event)">
+    <option value="rojo">Rojo</option>
+    <option value="naranja">Naranja</option>
+    <option value="verde">Verde</option>
+  </select>
   <div>
-    <label for="controller">Controlador</label>
-    <select id="controller" (change)="onSelect($event)">
-      <option value="rojo">Rojo</option>
-      <option value="naranja">Naranja</option>
-      <option value="verde">Verde</option>
-    </select>
+    <input type="checkbox" id="onTrafficLight" (click)="checkOnOff()">
+    <label for="onTrafficLight" class="onOff">
+      <span [ngClass]="controllerTrafficLight.onTrafficLight ? 'bold': ''">Encendido</span>
+      <span [ngClass]="controllerTrafficLight.onTrafficLight ? '': 'bold'"
+        ngClass="controllerTrafficLight.ononTrafficLight === false">/apagado</span></label>
   </div>
-  <input type="checkbox" id="onTrafficLight" (click)="checkOnOff()">
-  <label for="onTrafficLight">Encendido/apagado</label>
 </form>

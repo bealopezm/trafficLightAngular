@@ -18,6 +18,9 @@ export class ControllerComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.traficLightService.getTraficLight().subscribe(trafficLight => {
+      this.controllerTrafficLight = trafficLight;
+    });
   }
 
   onSelect($event: any) {
