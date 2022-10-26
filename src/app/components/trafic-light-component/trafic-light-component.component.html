@@ -1,0 +1,11 @@
+<div class="semaforo">
+  <div class="circulo">
+    <div *ngIf="(trafficLight.color === 'rojo' && trafficLight.onTrafficLight === true)" class="rojo"></div>
+  </div>
+  <div class="circulo">
+    <div *ngIf="(trafficLight.color === 'naranja' && trafficLight.onTrafficLight === true)" class="naranja"></div>
+  </div>
+  <div class="circulo">
+    <div *ngIf="(trafficLight.color === 'verde' && trafficLight.onTrafficLight === true)" class="verde"></div>
+  </div>
+</div>
