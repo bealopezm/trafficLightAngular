@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TraficLight } from '../../interfaces/trafic-light';
-import { TraficLightServiceService } from '../../services/trafic-light-service.service';
+import { TrafficLight } from '../../interfaces/traffic-light';
+import { TrafficLightServiceService } from '../../services/traffic-light-service.service';
 
 @Component({
   selector: 'app-controller-component',
@@ -9,16 +9,16 @@ import { TraficLightServiceService } from '../../services/trafic-light-service.s
 })
 export class ControllerComponentComponent implements OnInit {
 
-  controllerTrafficLight: TraficLight;
+  controllerTrafficLight: TrafficLight;
 
   constructor(
-    private traficLightService: TraficLightServiceService
+    private trafficLightService: TrafficLightServiceService
   ) {
     this.controllerTrafficLight = { color: 'rojo', onTrafficLight: false }
   }
 
   ngOnInit(): void {
-    this.traficLightService.getTraficLight().subscribe(trafficLight => {
+    this.trafficLightService.getTrafficLight().subscribe(trafficLight => {
       this.controllerTrafficLight = trafficLight;
     });
   }
@@ -34,8 +34,8 @@ export class ControllerComponentComponent implements OnInit {
     }
   }
 
-  addController(trafficLight: TraficLight) {
-    this.traficLightService.addTraficLight(trafficLight);
+  addController(trafficLight: TrafficLight) {
+    this.trafficLightService.addTrafficLight(trafficLight);
   }
 
 }

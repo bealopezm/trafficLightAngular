@@ -1,4 +1,4 @@
-.semaforo {
+.trafficLight {
   width: 120px;
   height: 250px;
   background-color: grey;
@@ -9,26 +9,26 @@
   padding: 6px 0;
 }
 
-.circulo {
+.circle {
   border: solid 1px rgb(100, 99, 99);
   width: 75%;
   height: 30%;
   border-radius: 50%;
 }
 
-.rojo {
+.red {
   background-color: red;
   height: 100%;
   border-radius: 50%;
 }
 
-.naranja {
+.orange {
   background-color: orange;
   height: 100%;
   border-radius: 50%;
 }
 
-.verde {
+.green {
   background-color: green;
   height: 100%;
   border-radius: 50%;
